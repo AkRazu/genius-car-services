@@ -8,6 +8,7 @@ import {
 import auth from "../../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { useState } from "react";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
@@ -35,6 +36,9 @@ const Register = () => {
   };
   return (
     <div className="register-form">
+      <PageTitle
+      title='Register'
+      ></PageTitle>
       <h2 className="text-center my-4">Please Register</h2>
       <form onSubmit={handelRegister} action="">
         <input type="text" name="name" id="" placeholder="Your Name" />
